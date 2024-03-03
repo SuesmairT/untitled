@@ -1,4 +1,4 @@
-package main.java.org.example._2024_01_30;
+package org.example._2024_01_30;
 
 import main.java.org.example._2024_01_18.Scanner;
 
@@ -23,6 +23,9 @@ public class Task300124 {
 
     public static String replaceNumbers(String string) {
         StringBuilder bilder = new StringBuilder();
+        if (string == null || string.length()% 2 != 0) {
+            return "ERROR";
+        }
         String numbers = string.substring(string.length() / 2);
         int index = 0;
         for (int i = 0; i < string.length(); i++) {
